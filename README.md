@@ -11,7 +11,7 @@
 
 
 
-## 关于结构设计
+<!-- ## 关于结构设计
 
 我视频中原版设计使用的`步进电机`+Harmonic的`谐波减速模组`，其中后者成本较高（我买的二手大概是600元一个），因此为了能让大家尽量复现本项目，我后期会添加一个`自制摆线针轮减速器`+`3D打印`的低成本方案。
 
@@ -130,13 +130,13 @@ Dummy固件支持三种不同的指令模式（指令可以由USB、串口、CAN
 | INT（实时指令）       | 随机，频率不限    | 指令覆盖，立即执行     | 是             | 无         | 用于实时控制，新指令会覆盖正在执行的指令得到立即响应；但是如果一次性发送一系列指令的话则效果会是只执行最后一条；适合场景例如**动作同步**。 |
 | `ToDo`TRJ（轨迹跟踪） | 固定，高（200Hz） | 自动插值，固定周期执行 | 否             | 无         | 适合用于需要进行精确轨迹跟踪的应用，速度会放慢；示例场景比如**3D打印、雕刻、绘画等**。 |
 
----
+--- -->
 
 
 
 > **感谢以下项目作者：**
 >
-> * [unlir/XDrive: Stepper motor with multi-function interface and closed loop function. 具有多功能接口和闭环功能的步进电机。 (github.com)](https://github.com/unlir/XDrive)
-> * [odriverobotics/ODrive: High performance motor control (github.com)](https://github.com/odriverobotics/ODrive)
-> * [olikraus/u8g2: U8glib library for monochrome displays, version 2 (github.com)](https://github.com/olikraus/u8g2)
-> * [samuelsadok/fibre: Abstraction layer for painlessly building object oriented distributed systems that just work (github.com)](https://github.com/samuelsadok/fibre)
+> * [机械臂入门教程：机械臂视觉抓取从理论到实战 (bilibili.com)](https://www.bilibili.com/video/BV1zP4y1S7yy)
+> * [B站UP主革命的草鞋 (bilibili.com)](https://www.bilibili.com/video/BV18S4y1A76F)
+> * [Delta-X-Firmware (github.com)](https://github.com/deltaxrobot/Delta-X-Firmware)
+> * [Dummy-Robot (github.com)](https://github.com/peng-zhihui/Dummy-Robot)
