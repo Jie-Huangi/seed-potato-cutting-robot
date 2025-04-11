@@ -3,7 +3,7 @@
 >
 <!-- > 视频介绍：[【自制】我造了一台 钢 铁 侠 的 机 械 臂 ！【硬核】](https://www.bilibili.com/video/BV12341117rG) -->
 >
-> Video : [An automated cutting robot system - YouTube](https://www.youtube.com/watch?v=F29vrvUwqS4)
+> Video : [An automated cutting robot system - YouTube](https://www.bilibili.com/video/BV1eN411P7Rq/?spm_id_from=333.1387.homepage.video_card.click&vd_source=c22c0bdbee7d0f45e072fba519a4b9f1)
 
 ![](Docs/1.CuTo-Robot.png)
 
