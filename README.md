@@ -1,40 +1,13 @@
 # CuTo-Robot: An automated cutting robot system
-<!-- > **我的超迷你机械臂机器人项目。** -->
+> **Title: Design and implementation of a seed potato cutting robot using deep learning and delta robotic system with accuracy and speed for automated processing of agricultural products**
 >
-<!-- > 视频介绍：[【自制】我造了一台 钢 铁 侠 的 机 械 臂 ！【硬核】](https://www.bilibili.com/video/BV12341117rG) -->
+> 视频介绍：[【自制】马铃薯种薯切块机器人！【硬核】](https://www.bilibili.com/video/BV1eN411P7Rq)
 >
-> Video : [An automated cutting robot system - YouTube](https://www.bilibili.com/video/BV1eN411P7Rq/?spm_id_from=333.1387.homepage.video_card.click&vd_source=c22c0bdbee7d0f45e072fba519a4b9f1)
+> Video : [An automated cutting robot system - YouTube](https://www.bilibili.com/video/BV1eN411P7Rq)
 
 ![](Docs/1.CuTo-Robot.png)
 
 ![](Docs/2.Delta.png)
-
-### 资料说明（更新日期22-2-9）
-
-* 已添加3D模型设计源文件。
-* 已添加夹爪硬件设计文件和LED灯环PCB
-* 已添加无线空间定位控制器PCB文件
-* 已添加无线示教器Peak软硬件工程（作为submodule）
-* 已添加REF的硬件设计文件
-* 已添加DummyStudio上位机
-* 已添加Dummy核心控制器的固件源代码（使用说明见后文）
-* 已添加42步进电机驱动器硬件工程
-* 已添加20步进电机驱动器硬件工程
-* 已添加42/20步进电机驱动的固件源代码
-* 已添加命令行调试工具reftool（基于odrivetool框架）
-* 已添加便携手提箱的模型文件
-
-
-
-> 这是视频中原版机械臂的完整设计方案，该方案成本和制作难度都比较高，因此想复现的同学建议再等等我后面会发布的**Dummy青春版**，该版本会有如下改进：
->
-> 1. 整机重新设计结构，改用3D打印作为制造方案（原版为铝CNC），大幅降低制造成本
-> 2. 采用我自己设计的小型摆线针轮减速器替代原版的谐波减速器，大幅降低零件成本
-> 3. 所有软件和固件和原版通用，功能也完全一致
-> 4. 添加我自己设计的PC端上位机和手机端APP（争取把用户初始化设置引导加进去）
-> 5. 改进原版电机驱动器的走线方式，原版电源走线采用焊接的形式，不便于安装和拆卸，后面的青春版会使用4p接插件（电源+CAN总线）连接
-> 6. 整机成本争取做到2000以内
-> 7. **最重要的，会找人出一个保姆级的视频教程！**
 
 
 
