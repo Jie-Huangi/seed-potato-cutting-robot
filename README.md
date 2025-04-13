@@ -1,9 +1,9 @@
-# CuTo-Robot: An automated cutting robot system
+# CuTo-Robot: An automated potato cutting robot system
 > **Title: Design and implementation of a seed potato cutting robot using deep learning and delta robotic system with accuracy and speed for automated processing of agricultural products**
 >
 > 视频介绍：[【自制】马铃薯种薯切块机器人！【硬核】](https://youtu.be/niPWDtM_0C8)
 >
-> Video : [An automated cutting robot system - YouTube](https://youtu.be/niPWDtM_0C8)
+> Video : [An automated potato cutting robot system - YouTube](https://youtu.be/niPWDtM_0C8)
 
 ![](Docs/1.CuTo-Robot.png)
 
