@@ -1,56 +1,54 @@
-# CuTo-Robot: An automated potato cutting robot system
+[中文版](./README.zh.md) | [English Version](./README.md)
+
+# CuTo-Robot: An Automated Potato Cutting Robot System
 > **Title: Design and implementation of a seed potato cutting robot using deep learning and delta robotic system with accuracy and speed for automated processing of agricultural products**
 >
-> 视频介绍：[【自制】马铃薯种薯切块机器人！【硬核】](https://youtu.be/niPWDtM_0C8)
+> Video Introduction (Chinese): [【自制】马铃薯种薯切块机器人！【硬核】](https://youtu.be/niPWDtM_0C8) (Homemade Potato Seed Cutting Robot! [Hardcore])
 >
-> Video : [An automated potato cutting robot system - YouTube](https://youtu.be/niPWDtM_0C8)
+> Video (English): [An automated potato cutting robot system - YouTube](https://youtu.be/niPWDtM_0C8)
 
 ![](Docs/1.CuTo-Robot.png)
 
 ![](Docs/2.Delta.png)
 
+## About the Potato Cutting Robot: From September 2022 to April 2025
 
- ## 关于马铃薯切块机器人：从2022年9月到2025年4月
-
-马铃薯切块机器人项目从2022年8月份，我研一那个暑假开始的。那年暑假，我从零开始设计机械结构，开学后和师弟们一起搭实验台，到9月底，我们的第一代原型机就出来了。
+The potato cutting robot project started in August 2022, during the summer of my first year of master's studies. That summer, I designed the mechanical structure from scratch. After the semester began, my junior colleagues and I built the experimental platform, and by the end of September, our first-generation prototype was ready.
 
 ![](Docs/3.Version-1.1-Robot.gif)
 
-当时我用舵机串联做了个机械臂，想着能从不同角度去切，切出更完美的马铃薯块。
-想法是美好的，现实是残酷的。我为这个串联臂的设计挣扎了差不多两个月，大概到11月份。认识到自己造的机械臂肯定行不通，买工业臂又没那个条件。
-中途还想过用ROS控制、搞强化学习避开芽眼这些听起来高大上的东西，但折腾了一把又一把头发，发现技术难度、时间成本都让我觉得，这条路在我这里走不通。
+At that time, I used serially connected servo motors to create a robotic arm, hoping to cut potatoes from different angles for more perfect pieces.
+The idea was good, but reality was harsh. I struggled with this serial arm design for about two months, until around November. I realized that the arm I built wouldn't work, and buying an industrial arm was not an option.
+I also considered using ROS for control and reinforcement learning to avoid the potato eyes—things that sounded advanced—but after much effort, I found the technical difficulty and time cost were too high for me to pursue this path.
 
-意识到多角度切割这条路行不通后，我不得不调整思路。我开始想，如果降低要求，只做直上直下的切割呢？
-也许切块质量会差点，但至少能把切割动作执行起来。这个念头一出来，我下意识就想到了Delta并联机械臂，感觉可行性一下大了很多，毕竟它的结构适合快速的垂直运动，负载能力也很强。
+Realizing that multi-angle cutting was not feasible, I had to adjust my approach. I started thinking, what if I lowered the requirements and only performed top-down cutting?
+The quality of the cut pieces might be slightly worse, but at least the cutting action could be performed. As soon as this idea came to mind, I instinctively thought of the Delta parallel robot. The feasibility seemed much higher, as its structure is suitable for fast vertical movements and has a strong load capacity.
 
-刚好那时候（大概11月底），我在网上看到有分享开源Delta机械臂的资料。当时又因为疫情放开学校要求学生回家，但我为了把这个新方向的机械臂组装好，申请了留校。
-折腾了一个月左右，到12月底，我终于组装好了第一台Delta臂，并且能用Arduino Mega 2560控制它动起来。
+Around that time (late November), I found open-source Delta robot materials online. Due to the pandemic, the university required students to return home, but I applied to stay on campus to assemble this new robotic arm.
+After about a month of work, by the end of December, I finally assembled the first Delta arm and could control its movement using an Arduino Mega 2560.
 
 ![](Docs/4.Version-1.2-Robot.gif)
 
-回家过完年后，2023年开年事情就顺畅多了。1-2月在家写了篇识别芽眼的中文论文（5月发表），4月模仿那个开源机械臂重新设计了一款Delta臂，4月底，切块机械臂拉到江苏大学参加了比赛。
-那时候的设备还不太稳定，切块动作只能单方向切割，不能根据马铃薯姿态调整末端执行器的位置。随后我设计一个简易的切块决策机制，基本上可以使用。到了暑假7、8月份，项目搁置。
+After returning home for the New Year, things went much smoother in early 2023. From January to February, I wrote a Chinese paper on potato eye recognition (published in May). In April, I redesigned a Delta arm based on the open-source model. By the end of April, the cutting robot was taken to Jiangsu University for a competition.
+At that time, the equipment was not very stable. The cutting action could only be performed in one direction, and the end-effector's position could not be adjusted according to the potato's posture. Later, I designed a simple cutting decision mechanism, which was basically usable. The project was put on hold during the summer months of July and August.
 
-进入博士阶段（2023年9月），我又期望重新点燃我的设备。我把原来的开环驱动换成了带光耦的闭环驱动，让运动更稳定精确。视觉方面，我尝试了用语义分割加PCA来算马铃薯姿态。9月30号凌晨12点撰写好了论文大纲，
-准备二天写具体内容。事与愿违，我第2天乃至于随后的200天都没有来得及写。
+Upon starting my PhD program (September 2023), I hoped to revive my equipment. I replaced the original open-loop drive with a closed-loop drive with optocouplers, making the movement more stable and precise. For vision, I tried using semantic segmentation plus PCA to calculate the potato's posture. On September 30th, around midnight, I drafted the paper outline, planning to write the detailed content the next day. Unfortunately, I didn't manage to write it on the second day, nor for the following 200 days.
 
-到了2023年12月份左右，我把目光投向了旋转目标检测，研究了一阵子，改了改YOLO的损失函数，终于可以直接稳定地预测出马铃薯带角度的边界框了。这段经历也提升了我的代码能力。
-基于这个旋转目标检测的成果，我1、2、3这几个月准备了篇SCI论文，2024年4月投出去，年底12月份online。另外，8月份还写了一篇关于决策算法的文章，一直在投稿。
+Around December 2023, I turned my attention to rotated object detection. After some research and modifying YOLO's loss function, I could finally stably predict the potato's bounding box with an angle. This experience also improved my coding skills.
+Based on this rotated object detection achievement, I prepared an SCI paper in January, February, and March, submitted it in April 2024, and it went online in December. Additionally, in August, I wrote an article on decision algorithms, which is still under review.
 
-2024年底11月份，我重新拾起了23年9月底就计划要写的系统集成文章。到了2025年1月份，初稿基本完成。
-过完年后，从2月份开始，我又对设备进行了重大修改和实验：更新了底层算法、换了摄像头和输送带，还改进了切割决策的机制。我现在正在写的这篇论文，就是基于这次最新的软硬件升级和实验结果。
+In November 2024, I revisited the system integration article I had planned to write at the end of September 2023. By January 2025, the first draft was basically complete.
+After the New Year, starting in February, I made significant modifications and experiments on the equipment: updated the underlying algorithms, replaced the camera and conveyor belt, and improved the cutting decision mechanism. The paper I am currently writing is based on these latest hardware and software upgrades and experimental results.
 
-从2022年9月到现在（2025年4月），这快两年七个月的时间里，我的马铃薯切块机器人在软硬件上经历了三次大的升级：从串联臂到并联臂，从开环驱动到闭环驱动，以及控制和视觉算法的不断强化。
-期间也产出了4篇相关的论文：一篇关于矩形框检测的中文核心，一篇关于旋转目标检测的SCI一区，还有两篇关于决策算法和系统集成的文章正在投稿中。
+From September 2022 to April 2025, nearly two years and seven months, my potato cutting robot has undergone three major upgrades in hardware and software: from a serial arm to a parallel arm, from open-loop drive to closed-loop drive, and continuous enhancement of control and vision algorithms.
+During this period, four related papers were produced: one Chinese core journal paper on rectangular box detection, one SCI Q1 journal paper on rotated object detection, and two articles on decision algorithms and system integration, which are currently under review.
 
-
-> **感谢以下项目作者：**
+> **Acknowledgements to the following project authors:**
 >
-> * [机械臂入门教程：机械臂视觉抓取从理论到实战 (bilibili.com)](https://www.bilibili.com/video/BV1zP4y1S7yy)
-> * [B站UP主革命的草鞋 (bilibili.com)](https://www.bilibili.com/video/BV18S4y1A76F)
+> * [Robotic Arm Tutorial: From Theory to Practice of Visual Grasping (bilibili.com)](https://www.bilibili.com/video/BV1zP4y1S7yy)
+> * [Bilibili UP Master "Revolutionary Straw Sandals" (bilibili.com)](https://www.bilibili.com/video/BV18S4y1A76F)
 > * [Delta-X-Firmware (github.com)](https://github.com/deltaxrobot/Delta-X-Firmware)
 > * [Dummy-Robot (github.com)](https://github.com/peng-zhihui/Dummy-Robot)
-
 
 ## Citation
 If you find our work useful in your research, please consider citing:
@@ -63,4 +61,3 @@ If you find our work useful in your research, please consider citing:
     year = {2025},
     doi = {10.1016/j.engappai.2024.109923},
 }
-```
